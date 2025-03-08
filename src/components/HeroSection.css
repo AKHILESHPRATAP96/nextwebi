@@ -1,0 +1,15 @@
+.font {
+  color: #dbdbdb;
+  font-weight: 800;
+  line-height: 24px;
+  font-family: Oswald;
+}
+
+.mainHeading {
+  color: #FFFFFF;
+  font-weight: 800;
+  line-height: 78px;
+  font-family: Oswald;
+  font-size: 60px;
+  letter-spacing: 0%;
+}

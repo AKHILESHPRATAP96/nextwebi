@@ -81,7 +81,7 @@ function Header() {
         component="nav"
         position="static"
         color="inherit"
-        sx={{ boxShadow: 0 }}
+        sx={{ boxShadow: 0, py: 1 }}
       >
         <Toolbar
           sx={{
@@ -234,7 +234,6 @@ function Header() {
           <ListItemButton>
             <ListItemText primary="Contact" />
           </ListItemButton>
-
           <ListItemButton>
             <ListItemText primary="Get Quotes" />
           </ListItemButton>
