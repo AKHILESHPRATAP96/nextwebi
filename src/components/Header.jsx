@@ -23,7 +23,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import MenuIcon from "@mui/icons-material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function Header() {
   //   const navigate = useNavigate();
@@ -36,7 +36,17 @@ function Header() {
 
   return (
     <Box component="section" width={"100%"}>
-      {/* Header with contact details and social icons */}
+    
+
+      {/* Navigation Bar */}
+      <CssBaseline />
+      <AppBar
+        component="nav"
+        position="static"
+        color="inherit"
+        sx={{ boxShadow: 0}}
+      >
+          {/* Header with contact details and social icons */}
       <Stack
         bgcolor={"#898989"}
         direction={{ xs: "column", sm: "row" }}
@@ -49,12 +59,12 @@ function Header() {
         {/* Contact Numbers */}
         <Stack direction="row" spacing={2} alignItems="center">
           <Stack direction="row" spacing={1} alignItems="center">
-            <CallIcon sx={{ color: "#FFFFFF" }} />
-            <Typography color="#ffff">+62 123 456 789</Typography>
+            <CallIcon sx={{ color: "#FFFFFF" }} fontSize="small"/>
+            <Typography color="#ffff" fontFamily={"Archivo"}>+62 123 456 789</Typography>
           </Stack>
-          <Stack direction="row" spacing={1} alignItems="center">
-            <CallIcon sx={{ color: "#FFFFFF" }} />
-            <Typography color="#ffff">+62 123 456 789</Typography>
+          <Stack direction="row" spacing={1}  alignItems="center">
+            <CallIcon sx={{ color: "#FFFFFF" }} fontSize="small" />
+            <Typography color="#ffff" fontFamily={"Archivo"}>+62 123 456 789</Typography>
           </Stack>
         </Stack>
 
@@ -74,15 +84,6 @@ function Header() {
           </IconButton>
         </Stack>
       </Stack>
-
-      {/* Navigation Bar */}
-      <CssBaseline />
-      <AppBar
-        component="nav"
-        position="static"
-        color="inherit"
-        sx={{ boxShadow: 0, py: 1 }}
-      >
         <Toolbar
           sx={{
             display: "flex",

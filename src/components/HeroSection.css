@@ -5,11 +5,18 @@
   font-family: Oswald;
 }
 
-.mainHeading {
-  color: #FFFFFF;
-  font-weight: 800;
-  line-height: 78px;
+.heading {
+  color: #ffffff;
+  font-weight: 900 !important;
+  line-height: 78px !important;
+  font-family: Oswald !important;
+  font-size: 68px !important;
+  letter-spacing: 0% !important;
+}
+.btn{
   font-family: Oswald;
-  font-size: 60px;
-  letter-spacing: 0%;
+
+  font-family: Oswald !important;
+ 
+  
 }
