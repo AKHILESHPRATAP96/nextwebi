@@ -1,5 +1,5 @@
 
-// import './App.css'
+import './App.css'
 import LandingPage from './Pages/view/LandingPage'
 import CssBaseline from '@mui/material/CssBaseline';
 

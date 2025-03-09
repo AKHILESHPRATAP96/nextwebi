@@ -12,41 +12,41 @@ export default function ReasonsToBook() {
     const [selected, setSelected] = useState(2);
 
     return (
-        <Box textAlign="center" py={5}>
-            <Typography variant="h5" fontWeight={600} gutterBottom>
+        <Box textAlign="center" py={5} bgcolor="#F9F9F9">
+            <Typography variant="h4" fontWeight={700} color="#6D6D6D" gutterBottom>
                 # Reasons To Book
             </Typography>
-            <Typography variant="h5" fontWeight={600} gutterBottom>
+            <Typography variant="h4" fontWeight={700} color="#6D6D6D" gutterBottom>
                 With DMCI
             </Typography>
-            <Grid container spacing={2} justifyContent="center" mt={3}>
+            <Grid container spacing={3} justifyContent="center" mt={3}>
                 {reasons.map((reason, index) => (
                     <Grid item key={index}>
                         <Paper
                             onMouseOver={() => setSelected(index)}
-                            //   onMouseLeave={() => setSelected(2)}
-                            elevation={selected === index ? 4 : 0}
+                            elevation={0}
                             sx={{
-                                width: 220,
-                                height: 150,
-                                p: 2,
+                                width: 230,
+                                height: 200,
+                                p: 3,
                                 textAlign: "center",
-                                borderRadius: 3,
-                                border: selected === index ? "none" : "1px dashed #ccc",
-                                backgroundColor: selected === index ? "#757575" : "transparent",
-                                color: selected === index ? "white" : "black",
+                                borderRadius: 4,
+                                border: selected === index ? "none" : "1px dashed #D3D3D3",
+                                backgroundColor: selected === index ? "#979797" : "transparent",
+                                color: selected === index ? "white" : "#7B7B7B",
                                 cursor: "pointer",
                                 transition: "0.3s",
-                                '&:hover': { backgroundColor: selected === index ? "#757575" : "#f5f5f5" },
                             }}
                         >
-                            <Typography variant="h6" fontWeight={600} sx={{ opacity: 0.7 }}>
+                            <Typography variant="h6" fontWeight={600} sx={{ opacity: 0.6 }}>
                                 {reason.number}
                             </Typography>
-                            <Typography variant="subtitle1" fontWeight={600}>
+                            <Typography variant="subtitle1" fontWeight={700} mt={1}>
                                 {reason.title}
                             </Typography>
-                            <Typography variant="body2" mt={1}>{reason.desc}</Typography>
+                            <Typography variant="body2" mt={1}>
+                                {reason.desc}
+                            </Typography>
                         </Paper>
                     </Grid>
                 ))}

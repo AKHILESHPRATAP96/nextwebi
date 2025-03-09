@@ -3,8 +3,11 @@
 
 
 :root {
-  font-family:Oswald , sans-serif;
+  font-family:Oswald , sans-serif 0% !important;
   letter-spacing: 0% !important;
+  margin: 0px;
+  padding: 0px;
+  
 }
 
 @media (prefers-color-scheme: light) {

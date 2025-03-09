@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Button, Card, CardContent } from "@mui/material";
+import { Box, Typography, Grid, Button } from "@mui/material";
 
 const packages = [
     {
@@ -18,19 +18,19 @@ const packages = [
 
 const PackagesSection = () => {
     return (
-        <Box sx={{ px: { xs: 2, md: 10 }, py: 6, textAlign: "left", backgroundColor: "#ffff" }}>
+        <Box sx={{ px: { xs: 2, md: 10 }, py: 6, mt: 5, textAlign: "left", backgroundColor: "#ffff" }}>
             {/* Title & Description */}
             <Grid container spacing={2} alignItems="center">
                 <Grid item xs={12} sm={6}>
-                    <Typography variant="body2" sx={{ color: "#7B7B7B", textTransform: "uppercase", fontWeight: "bold" }}>
+                    <Typography variant="body2" sx={{ color: "#D9D9D9", textTransform: "uppercase", fontWeight: 600, fontFamily: "Oswald" }}>
                         Most Popular
                     </Typography>
-                    <Typography variant="h4" sx={{ fontWeight: "bold", mt: 1, fontFamily: "Archivo" }}>
+                    <Typography textTransform={"none"} variant="h4" sx={{ color: "#979797", fontWeight: 600, fontFamily: "Oswald", fontSize: { xs: "32px", md: "45px" }, mt: 3 }}>
                         Canada Special Packages
                     </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Typography sx={{ color: "#7B7B7B", lineHeight: 1.6 }}>
+                    <Typography sx={{ color: "#979797", fontWeight: 400, fontFamily: "Archivo", fontSize: "15px", lineHeight: "26px", px: { xs: 2, md: 8 } }}>
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
                     </Typography>
@@ -40,10 +40,11 @@ const PackagesSection = () => {
             {/* Package Cards */}
             <Grid container spacing={3} sx={{ mt: 4 }}>
                 {packages.map((pkg, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index}>
+                    <Grid item xs={12} sm={6} md={4} key={index} display="flex" justifyContent="center">
                         <Box
                             sx={{
-                                width: 330,
+                                width: "100%",
+                                maxWidth: 330,
                                 height: 450,
                                 borderRadius: "16px",
                                 background: "linear-gradient(to bottom, #E0E0E0, #BDBDBD)",
@@ -51,14 +52,11 @@ const PackagesSection = () => {
                                 flexDirection: "column",
                                 justifyContent: "flex-end",
                                 alignItems: "center",
-                                padding: 3  ,
+                                padding: 2,
                                 boxShadow: 3,
                                 transition: "transform 0.3s ease-in-out",
-                                "&:hover": {
-                                  transform: "scale(1.05)",
-                                },
+                                "&:hover": { transform: "scale(1.05)" },
                             }}
-
                         >
                             {/* Image Placeholder */}
                             <Typography

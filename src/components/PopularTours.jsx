@@ -1,12 +1,13 @@
 import React from "react";
 import { Box, Typography, Card, CardContent } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/system";
+import { Stack, styled } from "@mui/system";
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 
 // Styled Card Component
 const StyledCard = styled(Card)({
-    width: "280px",
-    height: "400px",
+    width: "350px",
+    height: "500px",
     borderRadius: "16px",
     display: "flex",
     flexDirection: "column",
@@ -21,6 +22,8 @@ const StyledCard = styled(Card)({
     "&:hover": {
         transform: "scale(1.05)",
     },
+    borderRadius: 20,
+    border: "10px solid #FFFFFF",
 });
 
 // Styled Text Over Image
@@ -41,19 +44,25 @@ const TourCard = ({ title, description, price }) => {
             <ImageText>Place Image Here</ImageText>
 
             <CardContent sx={{ textAlign: "center", width: "100%" }}>
-                <Typography sx={{ color: "#fff", fontSize: "18px", fontWeight: "bold" }}>
+                <Typography sx={{ color: "#fff", fontSize: "18px", fontWeight: "bold" ,textAlign:"start"}}>
                     {title}
                 </Typography>
-                <Typography sx={{ color: "#dcdcdc", fontSize: "14px", mb: 2 }}>
+                <Typography sx={{ color: "#fff", fontSize: "14px", mb: 2 ,textAlign:"start"}}>
                     {description}
                 </Typography>
 
-                <Typography sx={{ color: "#fff", fontSize: "20px", fontWeight: "bold" }}>
+                <Stack direction={"row"} justifyContent={'space-between'}>
+              <div>
+              <Typography sx={{ color: "#fff", fontSize: "20px", fontWeight: "bold",textAlign:"start" }}>
                     {price} +
                 </Typography>
-                <Typography sx={{ color: "#dcdcdc", fontSize: "14px" }}>
+
+                <Typography sx={{ color: "#fff", fontSize: "14px" }}>
                     Tour Package
                 </Typography>
+              </div>
+                <ArrowForwardIosSharpIcon sx={{color:"#fff"}}/>
+                </Stack>
             </CardContent>
         </StyledCard>
     );
@@ -62,26 +71,38 @@ const TourCard = ({ title, description, price }) => {
 // Main Section
 const PopularTours = () => {
     return (
-        <Box sx={{ background: "linear-gradient(to bottom, #757575, #F5F5F5)", padding: 6 }}>
+        <Box sx={{ padding: 6 }} position={"relative"} >
+            <Box
+                sx={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "60%",
+                    background: "linear-gradient(to bottom, #757575, #F5F5F5)",
+                    // borderRadius: "8px",
+                    zIndex: -1,
+                }}
+            />
             {/* Title */}
             <Box sx={{ textAlign: "left", mb: 4 }}>
-                <Typography variant="h5" sx={{ color: "#fff", fontWeight: "bold", textTransform: "uppercase" }}>
+                <Typography variant="h5"  sx={{ color: "#ffff", fontWeight: 700, fontFamily: "Archivo", fontSize: "40px",lineHeight:"59px" }}>
                     Most Popular Tours
                 </Typography>
-                <Typography variant="h5" sx={{ color: "#fff", fontWeight: "bold", textTransform: "uppercase" }}>
-                    In <span style={{ color: "#FFD700" }}>USA</span>
+                <Typography variant="h5" sx={{ color: "#ffff", fontWeight: 700, fontFamily: "Archivo", fontSize: "45px" ,lineHeight:"59px"}}>
+                    In <span style={{ color: "#ffff" }}>USA</span>
                 </Typography>
             </Box>
 
             {/* Tour Cards */}
             <Grid container spacing={3} justifyContent="center">
-                <Grid item>
+                <Grid item  >
                     <TourCard title="High Mountain" description="Lorem ipsum dolor sit amet consectetur adipiscing elit" price="350" />
                 </Grid>
-                <Grid item>
+                <Grid item  >
                     <TourCard title="USA Mountain" description="Lorem ipsum dolor sit amet consectetur adipiscing elit" price="18" />
                 </Grid>
-                <Grid item>
+                <Grid item   >
                     <TourCard title="River Country" description="Lorem ipsum dolor sit amet consectetur adipiscing elit" price="38" />
                 </Grid>
             </Grid>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Card, CardContent, Button, Chip, Grid } from "@mui/material";
+import { Box, Typography, Card, CardContent, Button, Chip, Grid, Stack } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const blogPosts = [
@@ -22,19 +22,19 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <Box sx={{ maxWidth: "1200px", mx: "auto", py: 5 }}>
+    <Box sx={{ maxWidth: "1200px", mx: "auto", py: 5, px: 2 }}>
       {/* Heading & "Discover All" Link */}
-      <Box display="flex" justifyContent="space-between" alignItems="center" mb={4}>
-        <Typography variant="h4" fontWeight="bold">
+      <Stack direction="row" justifyContent="space-between" alignItems="center" mb={4}>
+        <Typography variant="h4" fontWeight="bold" color="#7B7B7B" fontFamily={"Archivo"}>
           Travelling Blog
         </Typography>
         <Button
           endIcon={<ArrowForwardIcon />}
-          sx={{ textTransform: "none", color: "gray", fontSize: "14px" }}
+          sx={{ textTransform: "none", color: "text.secondary", fontSize: "14px" }}
         >
           Discover All
         </Button>
-      </Box>
+      </Stack>
 
       {/* Blog Cards */}
       <Grid container spacing={3}>
@@ -42,42 +42,46 @@ const Blog = () => {
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               sx={{
-                borderRadius: 3,
-                boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.1)",
+                borderRadius: 4,
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
                 overflow: "hidden",
-                "&:hover": { transform: "scale(1.02)", transition: "0.3s" },
+                backgroundColor: "#f9f9f9",
+                height:"100%",
+                width:"90%",
+                
               }}
             >
               {/* Image Placeholder */}
               <Box
                 sx={{
                   height: 180,
-                  backgroundColor: "#f0f0f0",
+                  backgroundColor: "#e0e0e0",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   color: "gray",
                   fontWeight: "bold",
+                  fontSize: "12px",
                 }}
               >
                 PLACE IMAGE HERE
               </Box>
 
-              <CardContent sx={{ textAlign: "left" }}>
+              <CardContent>
                 {/* Tags */}
-                <Box display="flex" gap={1} mb={1}>
+                <Stack direction="row" spacing={1} mb={1} color={"#9D9D9D"} fontFamily={"Archivo"}>
                   {post.tags.map((tag, i) => (
-                    <Chip key={i} label={tag} sx={{ backgroundColor: "#f5f5f5", fontSize: "12px" }} />
+                    <Chip key={i} label={tag} sx={{ backgroundColor: "#f0f0f0", fontSize: "12px" }} />
                   ))}
-                </Box>
+                </Stack>
 
                 {/* Title */}
-                <Typography variant="h6" fontWeight="bold">
+                <Typography variant="h6" fontWeight="bold" gutterBottom color="#7B7B7B" fontFamily={"Archivo"}>
                   {post.title}
                 </Typography>
 
                 {/* Description */}
-                <Typography variant="body2" color="text.secondary" mb={2}>
+                <Typography variant="body2" color="#6E6E6E" mb={2} fontFamily={"Archivo"}>
                   {post.description}
                 </Typography>
 
@@ -85,11 +89,13 @@ const Blog = () => {
                 <Button
                   variant="contained"
                   sx={{
-                    backgroundColor: "#e0e0e0",
-                    color: "black",
+                    backgroundColor: "#BDBDBD",
+                    color: "#fff",
                     textTransform: "none",
                     borderRadius: "20px",
-                    "&:hover": { backgroundColor: "#d6d6d6" },
+                    boxShadow: "none",
+                    fontSize: "14px",
+                    "&:hover": { backgroundColor: "#ccc" },
                   }}
                   endIcon={<ArrowForwardIcon />}
                 >

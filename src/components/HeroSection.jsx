@@ -38,22 +38,27 @@ function HeroSection() {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      height="350px"
+      height="400px"
       paddingX={4}
       sx={{ background: "linear-gradient(to bottom, #A0A0A0E5, #A0A0A066)" }}
+
     >
-      <Typography className="font" textAlign="center" gutterBottom>
-        Redefining travel services in Canada & USA
-      </Typography>
-      <Typography className="heading" textAlign="center"  gutterBottom>
-        Leading DMC For Canada & USA
-      </Typography>
+      <Stack gap={"20px"}>
+
+
+        <Typography className="font" textAlign="center" gutterBottom>
+          Redefining travel services in Canada & USA
+        </Typography>
+        <Typography className="heading" textAlign="center" gutterBottom>
+          Leading DMC For Canada & USA
+        </Typography>
+      </Stack>
 
       <Grid container spacing={2} justifyContent="center" maxWidth={900} marginTop={2}>
         <Grid item xs={12} sm={4}>
           <Item>
             <FormControl fullWidth>
-              <InputLabel sx={{color:"#BDBDBD"}}>Destination</InputLabel>
+              <InputLabel sx={{ color: "#BDBDBD" }}>Destination</InputLabel>
               <Select
                 value={destination}
                 onChange={handleDestinationChange}
@@ -69,7 +74,7 @@ function HeroSection() {
         <Grid item xs={12} sm={4}>
           <Item>
             <FormControl fullWidth>
-              <InputLabel sx={{color:"#BDBDBD"}}>Tour Type</InputLabel>
+              <InputLabel sx={{ color: "#BDBDBD" }}>Tour Type</InputLabel>
               <Select
                 value={tourType}
                 onChange={handleTourTypeChange}
@@ -85,7 +90,7 @@ function HeroSection() {
         <Grid item xs={12} sm={4}>
           <Item>
             <Button
-            className="btn"
+              className="btn"
               sx={{
                 backgroundColor: "#C2C2C2",
                 color: "#fff",

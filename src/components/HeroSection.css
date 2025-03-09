@@ -1,22 +1,43 @@
 .font {
-  color: #dbdbdb;
-  font-weight: 800;
-  line-height: 24px;
-  font-family: Oswald;
+  color: #dbdbdb !important;
+  font-weight: 800 !important;
+  line-height: 24px !important;
+  font-family: Oswald !important;
+  letter-spacing: 6% !important;
+  font-size: clamp(
+    14px,
+    2vw,
+    20px
+  ) !important; /* Adjust font size based on screen */
 }
 
 .heading {
   color: #ffffff;
-  font-weight: 900 !important;
-  line-height: 78px !important;
+  font-weight: 700 !important;
+  line-height: clamp(40px, 6vw, 78px) !important;
   font-family: Oswald !important;
-  font-size: 68px !important;
+  font-size: clamp(32px, 6vw, 60px) !important;
   letter-spacing: 0% !important;
+  text-align: center; /* Center the heading */
+  margin-bottom: 10px;
 }
-.btn{
-  font-family: Oswald;
 
+.btn {
   font-family: Oswald !important;
- 
-  
+  width: 100%; /* Ensure button fits on small screens */
+  padding: 10px 20px; /* Adjust padding for touch-friendly buttons */
+  text-align: center;
+}
+
+/* Make heading and button stack on small screens */
+@media (max-width: 600px) {
+  .heading {
+    text-align: center;
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  .btn {
+    width: 100%;
+    padding: 12px;
+  }
 }
