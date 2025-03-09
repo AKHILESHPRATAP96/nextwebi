@@ -46,8 +46,8 @@ const Blog = () => {
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.05)",
                 overflow: "hidden",
                 backgroundColor: "#f9f9f9",
-                height:"100%",
-                width:"90%",
+                height:450,
+                width:"95%",
                 
               }}
             >

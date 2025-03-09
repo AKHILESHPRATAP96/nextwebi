@@ -26,7 +26,7 @@ export default function TourPackage() {
   };
 
   return (
-    <Box bgcolor={"#F3F3F3"} sx={{ width: "100%", padding: "50px 120px", overflow: "hidden" }}>
+    <Box bgcolor={"#F3F3F3"} sx={{ width: "100%", padding: "50px 30px", overflow: "hidden" }}>
       {/* Header */}
       <Typography sx={{ color: "#7B7B7B", fontWeight: 700, fontSize: "36px", fontFamily: "Archivo", lineHeight: 1.2 }}>
         Introducing India, Oman And

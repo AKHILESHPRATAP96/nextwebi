@@ -26,8 +26,8 @@ export default function ReasonsToBook() {
                             onMouseOver={() => setSelected(index)}
                             elevation={0}
                             sx={{
-                                width: 230,
-                                height: 200,
+                                width: 260,
+                                height: 210,
                                 p: 3,
                                 textAlign: "center",
                                 borderRadius: 4,

@@ -85,7 +85,7 @@ const PopularTours = () => {
                 }}
             />
             {/* Title */}
-            <Box sx={{ textAlign: "left", mb: 4 }}>
+            <Box sx={{ textAlign: "left", mb: 4,zIndex:100 }}>
                 <Typography variant="h5"  sx={{ color: "#ffff", fontWeight: 700, fontFamily: "Archivo", fontSize: "40px",lineHeight:"59px" }}>
                     Most Popular Tours
                 </Typography>

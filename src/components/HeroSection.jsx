@@ -55,14 +55,15 @@ function HeroSection() {
       </Stack>
 
       <Grid container spacing={2} justifyContent="center" maxWidth={900} marginTop={2}>
-        <Grid item xs={12} sm={4}>
-          <Item>
+        <Grid item xs={12} sm={4}  >
+          <Item >
             <FormControl fullWidth>
               <InputLabel sx={{ color: "#BDBDBD" }}>Destination</InputLabel>
               <Select
                 value={destination}
                 onChange={handleDestinationChange}
-                sx={{ borderRadius: "30px" }}
+                sx={{ borderRadius: "30px"}}
+                label={"destination"}
               >
                 <MenuItem value={10}>Destination1</MenuItem>
                 <MenuItem value={20}>Destination2</MenuItem>
@@ -79,6 +80,7 @@ function HeroSection() {
                 value={tourType}
                 onChange={handleTourTypeChange}
                 sx={{ borderRadius: "30px" }}
+                label={"Tour Type"}
               >
                 <MenuItem value={10}>TourType1</MenuItem>
                 <MenuItem value={20}>TourType2</MenuItem>

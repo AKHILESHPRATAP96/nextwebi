@@ -33,6 +33,7 @@ export default function Testimonials() {
         py: 6,
         background: "linear-gradient(to bottom, #7d7d7d, #bfbfbf)",
         position: "relative",
+        width:"100%"
       }}
     >
       <Typography variant="overline" color="#DBDBDB" fontFamily={"Oswald"}>
@@ -42,21 +43,22 @@ export default function Testimonials() {
         Create A Tailored Itinerary That <br /> Exceeds Your Expectations
       </Typography>
 
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 4, gap: 3,paddingX:25 }} >
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4, gap: 1,px:10}} >
         {testimonials.map((testimonial, index) => (
           <Paper
             key={index}
             elevation={3}
             sx={{
               flex: "1 1 45%",
-              p: 4,
+              p: 2,
               borderRadius: 3,
               backgroundColor: "rgba(255, 255, 255, 0.1)",
               color: "white",
               textAlign: "center",
-              minHeight: 200,
+              minHeight: 300,
               backdropFilter: "blur(10px)",
               transition: "transform 0.5s ease-in-out",
+              
             
               
             }}
